@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+class Bus {
+    int totalSeats = 5;   // Total seats
+    int bookedSeats = 0;
+
+    void bookSeat(int seats) {
+        if(seats <= (totalSeats - bookedSeats)) {
+            bookedSeats += seats;
+            System.out.println(seats + " Seat(s) Booked Successfully!");
+        } else {
+            System.out.println("Not Enough Seats Available!");
+        }
+    }
+
+    void showAvailableSeats() {
+        System.out.println("Available Seats: " + (totalSeats - bookedSeats));
+    }
+}
+
+public class BusReservation {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        Bus b = new Bus();
+
+        System.out.println("1. Book Seat");
+        System.out.println("2. Check Available Seats");
+        System.out.print("Choose Option: ");
+        int choice = sc.nextInt();
+
+        switch(choice) {
+            case 1:
+                System.out.print("Enter Number of Seats to Book: ");
+                int seats = sc.nextInt();
+                b.bookSeat(seats);
+                break;
+
+            case 2:
+                b.showAvailableSeats();
+                break;
+
+            default:
+                System.out.println("Invalid Choice!");
+        }
+    }
+}
