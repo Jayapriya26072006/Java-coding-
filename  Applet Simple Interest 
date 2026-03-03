@@ -1,19 +1,9 @@
-<html>
-<head>
-<title>Interest Calculator Applet</title>
-</head>
 
-<body>
 
-<h2>Simple Interest Calculator</h2>
-
+/*
 <applet code="InterestApplet.class" width="400" height="300">
 </applet>
-
-</body>
-</html>
-
-<!-- Save this Java code separately as InterestApplet.java -->
+*/
 
 import java.applet.Applet;
 import java.awt.*;
